@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ReceptsApp"
         tools:targetApi="31">
         <activity
+            android:name=".tabtest"
+            android:exported="false" />
+        <activity
             android:name=".ReceptPage"
             android:exported="false" />
         <activity
