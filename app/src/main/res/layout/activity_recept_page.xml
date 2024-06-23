@@ -93,12 +93,12 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/timefast"/>
+                            android:src="@drawable/star"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text=" 12 minutes"
+                            android:text="add to favorites"
                             android:gravity="center"
                             android:textSize="17dp"
                             android:textStyle="bold"
@@ -115,12 +115,12 @@
                         <ImageView
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:src="@drawable/timefast"/>
+                            android:src="@drawable/mix"/>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text=" 12 minutes"
+                            android:text="4 serves"
                             android:gravity="center"
                             android:textSize="17dp"
                             android:textStyle="bold"

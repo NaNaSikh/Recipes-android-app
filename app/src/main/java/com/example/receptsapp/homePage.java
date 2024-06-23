@@ -1,28 +1,26 @@
 package com.example.receptsapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.viewpager.widget.ViewPager;
-
-import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-public class homePage extends AppCompatActivity {
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 
-    private ViewPager viewPager;
-    private TabLayout tabLayout;
+public class homePage extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+
+
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,38 +33,39 @@ public class homePage extends AppCompatActivity {
             return insets;
         });
 
-        viewPager = findViewById(R.id.viewPager);
-        tabLayout = findViewById(R.id.tablayout);
-        viewPager.setAdapter(new homePage.MyPagerAdapter(getSupportFragmentManager()));
-        tabLayout.setupWithViewPager(viewPager);
+
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
+        bottomNavigationView.setSelectedItemId(R.id.profile);
     }
 
-    private static  class MyPagerAdapter extends FragmentPagerAdapter{
-        MyPagerAdapter(FragmentManager fm) {super(fm); }
-        @Override
-        public  Fragment getItem(int position){
-            switch (position){
-                case 0: return new FragmentPopular();
-                case 1: return new Categories();
-                case 2: return  new FramgemtNew();
-                default: return  null;
-            }
+    Profile profile = new Profile();
+    Favorites favorites = new Favorites();
+
+    FragmentPopular popular = new FragmentPopular();
+    Categories categories = new Categories();
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.profile) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment, profile).commit();
+            return true;
+        } else if (item.getItemId() == R.id.favorites) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment, favorites).commit();
+            return true;
         }
 
-        @Override
-        public  int getCount(){
-            return 3;
+        else if (item.getItemId() == R.id.popular) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment, popular).commit();
+            return true;
         }
-
-        @Override
-        public CharSequence getPageTitle(int position){
-            switch (position){
-                case 0: return "Popular";
-                case 1: return  "Categories";
-                case 2: return  "New";
-                default: return null;
-            }
+        else if (item.getItemId() == R.id.categories) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment, categories).commit();
+            return true;
         }
-
+        return false;
     }
+
+
 }

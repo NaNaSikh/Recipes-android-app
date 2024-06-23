@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -28,7 +28,7 @@
                 android:src="@drawable/angleleft"
                 android:layout_weight="1"
                 android:id="@+id/backToHome"/>
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,54 +37,26 @@
                 android:textStyle="bold"
                 android:layout_weight="8"
                 android:gravity="center"/>
+
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/search"
-                android:layout_weight="1"
-                />
-
-
+                android:layout_weight="1"/>
         </LinearLayout>
 
-        <com.google.android.material.tabs.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tablayout"
-            app:tabMode="fixed"
-            android:background="@color/baige">
-
-        </com.google.android.material.tabs.TabLayout>
-        <androidx.viewpager.widget.ViewPager
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:id="@+id/viewPager"/>
 
 
         <FrameLayout
             android:id="@+id/fragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"/>
+            android:layout_weight="1"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@id/bottomNavigationView"
+            android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:menu="@menu/bottom_nav_menu"
-            />
-
-
-
+            android:layout_height="100dp"
+            app:menu="@menu/bottom_nav_menu"/>
     </LinearLayout>
-
 </RelativeLayout>

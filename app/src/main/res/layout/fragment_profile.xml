@@ -3,12 +3,223 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Profile">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical"
+     android:background="@color/baige">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:padding="50dp"
+
+        >
+     <ImageView
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:src="@drawable/salad"
+         android:layout_weight="1"
+         android:layout_gravity="center"/>
+
+     <ImageView
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:src="@drawable/grocerybag"
+         android:layout_weight="1"
+         />
+     <ImageView
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:src="@drawable/panfood"
+         android:layout_gravity="center"
+         android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+     android:background="@color/orange"  />
+
+ </LinearLayout>
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         app:cardCornerRadius="100dp"
+         android:layout_marginTop="125dp"
+         android:layout_gravity="center"
+         android:backgroundTint="@color/lightorange">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/clipboarduser"
+            android:layout_gravity="center"
+            />
+
+     </androidx.cardview.widget.CardView>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:padding="10dp">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="Name Lastname"
+             android:textSize="35dp"
+             android:textColor="@color/darkgreen"
+             android:textStyle="bold"
+
+             />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center"
+             android:text="Email: test@gmail.com"
+             android:textSize="20dp"
+             android:textColor="@color/darkgreen"
+             />
+
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_marginTop="30dp">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:background="@color/black"
+             android:layout_marginHorizontal="20dp" />
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             android:gravity="center"
+             android:weightSum="3"
+             android:padding="20dp">
+
+             <ImageView
+                 android:layout_width="40dp"
+                 android:layout_height="40dp"
+                 android:src="@drawable/bake"
+                 android:layout_weight="1"/>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="My recepies "
+                 android:textSize="25dp"
+                 android:textStyle="bold"
+                 android:textColor="@color/black"
+                 android:layout_weight="2"
+                 android:gravity="left"/>
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="1dp"
+             android:background="@color/black"
+             android:layout_marginHorizontal="20dp" />
+
+     </LinearLayout>
+
+     <HorizontalScrollView
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         >
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:orientation="horizontal"
+             android:padding="10dp"
+             android:layout_marginVertical="15dp">
+
+             <androidx.cardview.widget.CardView
+                 android:id="@+id/myrecept"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 app:cardCornerRadius="70dp"
+                 android:backgroundTint="@color/lightorange"
+                 android:layout_margin="5dp">
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:padding="10dp"
+                     android:layout_gravity="center"
+                     >
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Asian food"
+                         android:gravity="center"
+                         android:textSize="30dp"
+                         android:fontFamily="@font/fontlobster" />
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Clasicc asian recepis from to shefs "
+                         android:gravity="center"
+                         android:textSize="18dp"
+                         />
+
+                 </LinearLayout>
+             </androidx.cardview.widget.CardView>
+             <androidx.cardview.widget.CardView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 app:cardCornerRadius="70dp"
+                 android:backgroundTint="@color/lightorange"
+                 android:layout_margin="5dp">
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:orientation="vertical"
+                     android:padding="10dp"
+                     android:layout_gravity="center"
+                     >
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Asian food"
+                         android:gravity="center"
+                         android:textSize="30dp"
+                         android:fontFamily="@font/fontlobster" />
+                     <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Clasicc asian recepis from to shefs "
+                         android:gravity="center"
+                         android:textSize="18dp"
+                         />
+
+                 </LinearLayout>
+             </androidx.cardview.widget.CardView>
+         </LinearLayout>
+     </HorizontalScrollView>
+
+
+ </LinearLayout>
 
 </FrameLayout>
