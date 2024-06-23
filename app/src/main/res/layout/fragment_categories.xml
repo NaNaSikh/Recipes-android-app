@@ -39,14 +39,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Asian food"
+                            android:text="Georgian food"
                             android:gravity="center"
                             android:textSize="30dp"
                             android:fontFamily="@font/fontlobster" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Clasicc asian recepis from to shefs "
+                            android:text="Traditioal Georgian recepis from top shefs "
                             android:gravity="center"
                             android:textSize="18dp"
                             />
@@ -56,7 +56,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/asian"/>
+                        android:src="@drawable/xachapuriimage"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -129,14 +129,14 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Asian food"
+                            android:text="Italian food"
                             android:gravity="center"
                             android:textSize="30dp"
                             android:fontFamily="@font/fontlobster" />
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Clasicc asian recepis from to shefs "
+                            android:text="Clasicc Italian recepis from to shefs "
                             android:gravity="center"
                             android:textSize="18dp"
                             />
@@ -146,7 +146,7 @@
                         android:layout_weight="1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/asian"/>
+                        android:src="@drawable/italianpizza"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
